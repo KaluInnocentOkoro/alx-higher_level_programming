@@ -16,6 +16,6 @@ if __name__ == "__main__":
         if op in operators:
             ans = operators[op](a, b)
             print("{} {} {} = {}".format(a, op, b, ans))
-    else:
-        print("Unknown operator. Available operators: +, -, * and /")
-        exit(1)
+        else:
+            print("Unknown operator. Available operators: +, -, * and /")
+            exit(1)
