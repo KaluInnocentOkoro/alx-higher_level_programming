@@ -6,5 +6,6 @@ def print_reversed_list_integer(my_list=[]):
 
     Returns: The list in reverse order
     """
-    for ele in range(len(my_list), 0, -1):
-        print("{}".format(ele))
+    if my_list:
+        for ele in my_list[::-1]:
+            print("{:d}".format(ele))
