@@ -5,9 +5,10 @@ def replace_in_list(my_list, idx, element):
         my_list: (list)
         idx: (int) position of the element to be replaced
         element: element to added
+
     Returns: The updated list
     """
     size = len(my_list)
-    if >= 0 and idx <= size - 1:
+    if idx >= 0 and idx <= size - 1:
         my_list[idx] = element
     return my_list

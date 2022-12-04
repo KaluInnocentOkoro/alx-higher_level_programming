@@ -6,6 +6,7 @@ def new_in_list(my_list, idx, element):
         my_list: (list)
         idx: The required position
         element: element to be replaced
+
     Returns: A new list
     """
     size = len(my_list)
