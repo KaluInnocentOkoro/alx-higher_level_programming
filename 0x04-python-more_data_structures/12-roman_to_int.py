@@ -6,9 +6,9 @@ def roman_to_int(roman_string):
     rom_num = 0
     for idx in range(len(roman_string)):
         if idx > 0 and \
-        rom_fig[roman_string[idx]] > rom_fig[roman_string[idx - 1]]:
+                rom_fig[roman_string[idx]] > rom_fig[roman_string[idx - 1]]:
             rom_num += rom_fig[roman_string[idx]] - \
-            2 * rom_fig[roman_string[idx - 1]]
+                2 * rom_fig[roman_string[idx - 1]]
         else:
             rom_num += rom_fig[roman_string[idx]]
     return rom_num
