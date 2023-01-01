@@ -9,7 +9,7 @@ class Square:
         """initializes an instance of the square class
         Args:
             size (int): size of the square
-            postion (tuple): coordinates of tge square
+            position (tuple): coordinates of tge square
         """
         self.__size = size
         self.__position = position
@@ -66,3 +66,4 @@ class Square:
                 for j in range(self.__position[0]):
                     print(" ", end="")
                 print("#" * self.__size)
+
