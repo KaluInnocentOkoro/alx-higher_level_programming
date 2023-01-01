@@ -47,8 +47,8 @@ class Square:
         Args:
             value (tuple): A tuple of 2 integers
         """
-        if len(value) == 2 and isinstance(value, tuple) and
-        all(isinstance(i, int) for i in value) and all(i >= 0 for i in value):
+        if len(value) == 2 or isinstance(value, tuple) or
+        all(isinstance(i, int) for i in value) or all(i >= 0 for i in value):
             self.__position = value
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
