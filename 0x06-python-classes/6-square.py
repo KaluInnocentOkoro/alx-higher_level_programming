@@ -4,6 +4,7 @@
 
 class Square:
     """Defines a square object"""
+
     def __init__(self, size=0, position=(0, 0)):
         """initializes an instance of the square class
         Args:
@@ -47,11 +48,10 @@ class Square:
         Args:
             value (tuple): A tuple of 2 integers
         """
-        if len(value) != 2 or \
-                not isinstance(value, tuple) or \
+        if not isinstance(value, tuple) or len(value) != 2 or \
                 not all(isinstance(i, int) for i in value) or \
                 not all(i >= 0 for i in value):
-                    raise TypeError("position must be a tuple of 2 positive integer")
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def my_print(self):
