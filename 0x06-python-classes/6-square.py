@@ -58,12 +58,11 @@ class Square:
         """Public instance method that prints the square with to stdout
         """
         if self.__size == 0:
-            print()
-        else:
-            for i in range(self.__position[1]):
-                print("")
-            for idx in range(self.__size):
-                for j in range(self.__position[0]):
-                    print(" ", end="")
-                print("#" * self.__size)
-
+            print("")
+            return
+        for i in range(self.__position[1]):
+            print("")
+        for idx in range(self.__size):
+            for j in range(self.__position[0]):
+                print(" ", end="")
+            print("#" * self.__size)
