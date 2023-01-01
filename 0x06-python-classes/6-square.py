@@ -47,11 +47,11 @@ class Square:
         Args:
             value (tuple): A tuple of 2 integers
         """
-        if len(value) == 2 or isinstance(value, tuple) or
-        all(isinstance(i, int) for i in value) or all(i >= 0 for i in value):
-            self.__position = value
-        else:
-            raise TypeError("position must be a tuple of 2 positive integers")
+        if len(value) != 2 or not isinstance(value, tuple) or
+        not all(isinstance(i, int) for i in value) or
+        all(i < 0 for i in value):
+            raise TypeError("position must be a tuple of 2 positive integer")
+        self.__position = value
 
     def my_print(self):
         """Public instance method that prints the square with to stdout
