@@ -67,3 +67,59 @@ class Square:
             for k in range(0, self.__size):
                 print("#", end="")
             print("")
+
+    def __str__(self):
+        """Prints a string version of the square object"""
+        if self.__size != 0:
+            for i in range(0, self.__position[1]):
+                print()
+        for i in range(0, self.__size):
+            for j in range(0, self.__position[0]):
+                print(" ", end="")
+            for k in range(0, self.__size):
+                print("#", end="")
+            if i != self.__size - 1:
+                print()
+        return ""
+
+    def __eq__(self, other):
+        """Checks for the equality of two computed areas of Square objects
+        Args:
+            other (Square): A square to be compared
+        """
+        return self.area() == other.area()
+
+    def __ne__(self, other):
+        """Checks that two areas of a square are not equal
+        Args:
+            other(Square): Square for comparison
+        """
+        return self.area() != other.area()
+
+    def __gt__(self, other):
+        """Checks if the area of one square is greater than the other
+        Args:
+            other (Square): square to be compared
+        """
+        return self.area() > other.area()
+
+    def __ge__(self, other):
+        """Checks if the area of one square is greater than or equal to other
+        Args:
+            other (Square):
+        """
+        return self.area() >= other.area()
+
+    def __lt__(self, other):
+        """Checks if the area of one square is less than another
+        Args:
+            other (Square):
+        """
+        return self.area() < other.area()
+
+    def __le__(self, other):
+        """checks if the area of one square is than or equal to another
+        Args:
+            other (Square):
+        """
+        return self.area() <= other.area()
