@@ -99,4 +99,3 @@ class Rectangle:
         if area1 >= area2:
             return rect_1
         return rect_2
-
