@@ -61,6 +61,8 @@ class Rectangle:
     def __str__(self):
         """prints the rectangle object with '#'"""
         my_rect = []
+        if self.__width == 0 or self.__height == 0:
+            return ""
         for idx in range(0, self.__height):
             my_rect.append("#" * self.__width)
         return "\n".join(my_rect)
