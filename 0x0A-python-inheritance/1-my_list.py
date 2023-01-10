@@ -1,4 +1,4 @@
-#!/usr/in/pyhton3
+#!/usr/bin/pyhton3
 """ A subclass of python list"""
 
 
@@ -6,5 +6,5 @@ class MyList(list):
     """A class that inherits from python list"""
 
     def print_sorted(self):
-        """prints a sorted list of items"""
+        """Method prints a list in sorted order (ascending sort"""
         print(sorted(self))
