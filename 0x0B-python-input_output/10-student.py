@@ -23,5 +23,5 @@ class Student:
         """
         if isinstance(attrs, list):
             if all(isinstance(item, str) for item in attrs):
-                {k: getattr(self, k) for k in attrs if hasattr(self, k)}
+                {k: v for k, v in self.__dict__.items() if k in attrs}
         return self.__dict__
