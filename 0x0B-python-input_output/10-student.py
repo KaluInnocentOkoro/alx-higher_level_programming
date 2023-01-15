@@ -21,7 +21,6 @@ class Student:
         Args:
             attrs (list)
         """
-        if isinstance(attrs, list):
-            if all(isinstance(item, str) for item in attrs):
-                {k: v for k, v in self.__dict__.items() if k in attrs}
+        if type(attrs) is list and all(type(ele) is str for ele in attrs):
+            return {k: v for k, v in self.__dict__.items() if k in attrs}
         return self.__dict__
