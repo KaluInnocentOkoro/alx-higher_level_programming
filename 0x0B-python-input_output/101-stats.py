@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+"""python sys variable"""
 import sys
+
 
 total_size = 0
 status_counts = {
