@@ -4,16 +4,16 @@
 
 class Base:
     """Defines a Base class"""
-
     __nb_objects = 0
 
-    def __int__(self, id=None):
-        """Instantiates a new Base Object
+    def __init__(self, id=None):
+        """Instantiates a Base object
         Args:
             id (int)
         """
         if id is not None:
             self.id = id
         else:
-            type(self).__nb_objects += 1
-            self.id = type(self).__nb_objects
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
+
