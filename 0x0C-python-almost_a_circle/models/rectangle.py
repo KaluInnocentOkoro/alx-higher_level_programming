@@ -100,3 +100,34 @@ class Rectangle(Base):
             self.__width,
             self.__height
         )
+
+    def update(self, *args, **kwargs):
+        """Assigns an argument to each attribute of the object
+        Args:
+            args (list): list of arguments passed to the function
+            kwargs (dict): contains named arguments passed
+        """
+        if args is not None and len(args):
+            for k, v in enumerate(args):
+                if k == 0:
+                    self.id = v
+                elif k == 1:
+                    self.__width = v
+                elif k == 2:
+                    self.__height = v
+                elif k == 3:
+                    self.__x = v
+                elif k == 4:
+                    self.__y = v
+        else:
+            for k, v in kwargs.items():
+                if k == "id":
+                    self.id = v
+                elif k == "width":
+                    self.__width = v
+                elif k == "height":
+                    self.__height = v
+                elif k == "x":
+                    self.__x = v
+                elif k == "y":
+                    self.__y = v
